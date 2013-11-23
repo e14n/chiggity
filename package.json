@@ -24,6 +24,8 @@
         "test": "vows --spec -i test/*-test.js",
         "posttest": "npm run-script clean",
         "prepublish": "npm run-script build",
-        "postpublish": "npm run-script clean"
+        "postpublish": "npm run-script clean",
+        "prestart": "npm run-script build",
+        "start": "node lib/app.js"
   }
 }
