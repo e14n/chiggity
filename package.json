@@ -1,0 +1,29 @@
+{
+  "name": "chiggity",
+  "version": "0.1.0-alpha.1",
+  "author": "Evan Prodromou <evan@e14n.com>",
+  "description": "A checkin server for the pump network",
+  "dependencies": {
+    "pump.io-client-app": "0.7.x",
+    "async": "0.2.x",
+    "underscore": "1.5.x"
+  },
+  "devDependencies": {
+    "coffee-script": "1.6.x",
+    "vows": "0.7.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/e14n/chiggity.git"
+  },
+  "license": "Apache 2.0",
+  "scripts": {
+        "build": "mkdir -p lib/  && coffee -b -c -o lib/ src/*.coffee",
+        "clean": "rm -f lib/*.js test/*-test.js *~ lib/*~ src/*~ test/*~",
+        "pretest": "coffee -c test/*-test.coffee && npm run-script build",
+        "test": "vows --spec -i test/*-test.js",
+        "posttest": "npm run-script clean",
+        "prepublish": "npm run-script build",
+        "postpublish": "npm run-script clean"
+  }
+}
