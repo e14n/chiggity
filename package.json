@@ -4,7 +4,7 @@
   "author": "Evan Prodromou <evan@e14n.com>",
   "description": "A checkin server for the pump network",
   "dependencies": {
-    "pump.io-client-app": "0.7.x",
+    "pump.io-client-app": "0.8.x",
     "async": "0.2.x",
     "underscore": "1.5.x"
   },
