@@ -29,6 +29,9 @@ defaults =
   driver: "memory"
   params: {}
   name: "Chiggity"
+  description: "The checkin server for the pump network"
+  views: path.join(__dirname, "..", "views")
+  static: path.join(__dirname, "..", "public")
 
 if fs.existsSync "/etc/chiggity.json"
   config = JSON.parse fs.readFileSync "/etc/chiggity.json"
