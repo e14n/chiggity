@@ -1,0 +1,7 @@
+<p><b><%- site.name %></b> is a Web app that uses <a href="http://pump.io/">pump.io</a> for login.</p>
+
+<p><%= site.description %></p>
+
+<p>Thanks to the Seattle Municipal Archives for the nice <a href="http://www.flickr.com/photos/seattlemunicipalarchives/11070978946/">photo of a cool crashed car</a>.</p>
+
+

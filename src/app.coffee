@@ -32,7 +32,15 @@ defaults =
   description: "The checkin server for the pump network"
   views: path.join(__dirname, "..", "views")
   static: path.join(__dirname, "..", "public")
-
+  scripts: [
+    "//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.1/leaflet.js"
+    "//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"
+    "/javascript/chiggity.js"
+  ]
+  styles: [
+    "//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.1/leaflet.css"
+  ]
+  
 if fs.existsSync "/etc/chiggity.json"
   config = JSON.parse fs.readFileSync "/etc/chiggity.json"
   config = _.defaults config, defaults

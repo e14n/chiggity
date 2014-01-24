@@ -1,0 +1,23 @@
+<div class="jumbotron">
+
+  <div class="row">
+
+    <div class="col-md-8">
+
+      <h1><%= site.name %></h1>
+
+      <p><%= site.description %></p>
+
+      <p><a class="btn btn-primary" href="/login">Get started &raquo;</a></p>
+
+    </div>
+
+    <div class="col-md-4">
+
+      <img src="/images/wreck.jpg" alt="Don't let this happen to you" class="img-rounded img-responsive">
+
+    </div>
+    
+  </div>
+
+</div>
