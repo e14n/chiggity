@@ -38,7 +38,7 @@
   };
 
   $(document).ready(function() {
-    if (window.location.pathname === "/" && $('map').length) {
+    if ($('#map').length) {
       return loadLocations();
     }
   });

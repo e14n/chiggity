@@ -21,5 +21,5 @@ showLocations = (pos) ->
   false
   
 $(document).ready ->
-  if window.location.pathname == "/" and $('map').length
+  if $('#map').length
     loadLocations()
