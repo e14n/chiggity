@@ -46,16 +46,17 @@ exports.locations = (req, res, next) ->
     else
       nodes = result.osm.node
       locations = _.map nodes, (node) ->
-        console.dir node.tag
         name = _.find node.tag, (tag) -> return tag.$.k == "name"
+        amenity = _.find node.tag, (tag) -> return tag.$.k == "amenity"
         location =
           id: "tag:chiggity.net,2014:place:osm:#{node.$.id}"
           position:
-            latitude: node.$.lat
-            longitude: node.$.lon
+            latitude: parseFloat node.$.lat
+            longitude: parseFloat node.$.lon
           displayName: name?.$?.v
+          chiggity_net:
+            amenity: amenity?.$?.v
         location
       res.json locations
-      
     
   
