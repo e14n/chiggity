@@ -23,6 +23,8 @@ path = require "path"
 _ = require "underscore"
 PumpIOClient = require "pump.io-client-app"
 
+routes = require "./routes"
+
 defaults =
   hostname: "localhost"
   port: process.env.PORT || 80
@@ -50,6 +52,8 @@ else
 config.address = config.address or process.env.IP or config.hostname
 
 app = new PumpIOClient config
+
+app.get "/api/locations", routes.locations
 
 app.run (err) ->
   if err
