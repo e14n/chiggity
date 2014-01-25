@@ -1,10 +1,6 @@
-<div class="container">
-  <div class="row">
-    <div id="map" class="col-md-12" style="height: 300px">
-    </div>
+<div>
+  <div id="map" class="col-md-12" style="height: 300px">
   </div>
-  <div class="row">
-    <div id="locations" class="container">
-    </div>
-  </div>
+  <ul class="media-list" id="locations">
+  </ul>
 </div>

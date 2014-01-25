@@ -40,7 +40,12 @@ loadLocations = (bounds, latlng) ->
 updateList = (locations) ->
   $("#locations").empty()
   _.each locations, (location) ->
-    $("#locations").append("<div class='row'><div class='col-md-8'><h3>#{location.displayName} <small>#{location.chiggity_net.amenity}</small></h3></div> <div class='col-md-4 pull-right'>#{location.distance.toFixed(1)}km</div></div>")
+    $("#locations").append """<li class='media'>
+                              <div class='media-body'>
+                              <h3>#{location.displayName} <small>#{location.chiggity_net.amenity}</small></h3>
+                              <p>#{location.distance.toFixed(1)}km</p>
+                              </div>
+                              </li>"""
   false
     
 $(document).ready ->

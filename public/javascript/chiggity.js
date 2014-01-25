@@ -50,7 +50,7 @@
   updateList = function(locations) {
     $("#locations").empty();
     _.each(locations, function(location) {
-      return $("#locations").append("<div class='row'><div class='col-md-8'><h3>" + location.displayName + " <small>" + location.chiggity_net.amenity + "</small></h3></div> <div class='col-md-4 pull-right'>" + (location.distance.toFixed(1)) + "km</div></div>");
+      return $("#locations").append("<li class='media'>\n<div class='media-body'>\n<h3>" + location.displayName + " <small>" + location.chiggity_net.amenity + "</small></h3>\n<p>" + (location.distance.toFixed(1)) + "km</p>\n</div>\n</li>");
     });
     return false;
   };
