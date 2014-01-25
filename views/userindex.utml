@@ -2,6 +2,6 @@
   <script>
     loggedIn = true;
   </script>
-  <div id="map" style="height: 180px">
+  <div id="map" style="height: 300px">
   </div>
 </div>
